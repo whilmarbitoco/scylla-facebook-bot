@@ -1,50 +1,63 @@
-# 🤖 Facebook Chatbot with OpenAI API
+# 🤖 Scylla — Facebook Messenger Chatbot
 
-This project demonstrates a simple Facebook chatbot built using Node.js and the OpenAI API, offering natural language processing capabilities. The chatbot can interact with users by generating responses using OpenAI's GPT models.
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT-412991?logo=openai&logoColor=white)](https://openai.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## 🛠️ Setup and Installation
+A high-performance Facebook Messenger chatbot powered by OpenAI's GPT models. Built with Node.js, it delivers natural language responses to users through the Facebook Messenger Platform.
+
+## ✨ Highlights
+
+- **GPT-Powered Responses** — Leverages OpenAI API for intelligent, context-aware conversations
+- **Facebook Messenger Integration** — Full webhook handling for Messenger Platform events
+- **Lightweight & Fast** — Minimal dependencies, quick response times
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Runtime | Node.js 18+ |
+| AI/ML | OpenAI API (GPT) |
+| Platform | Facebook Messenger Platform |
+| Language | JavaScript |
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js (v12.x or later)
+- Node.js 18+
 - OpenAI API Key
+- Facebook Page + App (for webhook)
 
 ### Installation
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/whilmarbitoco/scylla-final-version.git
-    cd scylla-final-version
-    ```
+```bash
+git clone https://github.com/whilmarbitoco/scylla-facebook-bot.git
+cd scylla-facebook-bot
+npm install
+```
 
-2. **Install dependencies**:
-    ```bash
-    npm install
-    ```
+### Configuration
 
-3. **Set up environment variables**:
-    Create a `.env` file in the project root and add the following:
-    ```env
-    OPENAI_API_KEY=your_openai_api_key
-    ```
+Create a `.env` file:
 
-4. **Run the chatbot**:
-    ```bash
-    npm start
-    ```
+```env
+OPENAI_API_KEY=your_openai_api_key
+FB_PAGE_ACCESS_TOKEN=your_page_token
+FB_VERIFY_TOKEN=your_verify_token
+```
 
-## 🚀 Usage
+### Run
 
-After completing the setup, your chatbot will be ready to handle messages. Users can send messages to your Facebook page, and the chatbot will respond using the OpenAI API.
+```bash
+npm start
+```
 
-## 🙏 Acknowledgments
+## 📡 Architecture
 
-This project was made possible thanks to the OpenAI API. We appreciate their contributions to the field of artificial intelligence.
+```
+User Message → Facebook Webhook → Node.js Server → OpenAI API → Response → Messenger
+```
 
-### 🎉 Credits
+## 📄 License
 
-Special thanks to the OpenAI team for providing the API used in this project. For more information on the OpenAI API, visit their [website](https://openai.com/api/).
-
-### ©️ Copyright 2024 Whilmar Bitoco
-
-All rights reserved. This software is the property of Whilmar Bitoco. Unauthorized copying, distribution, or modification of this code, in whole or in part, is strictly prohibited. If you believe that you have received this code in error, please contact me at whlmrbitoco@gmail.com to report the issue. Any unauthorized use or distribution of this code may result in legal action.
+MIT © [Whilmar Bitoco](https://github.com/whilmarbitoco)
